@@ -150,14 +150,8 @@ if __name__ == '__main__':
         test_evaluate()
 
 
-    ## delete train, predict folder in result
-    # path = 'result/'
-    # import shutil
-    # for folder in os.listdir(path):
-    #     if 'predict' in folder:
-    #         shutil.rmtree(path + folder)
 
-    print('branch of feature')
+
 
 
 
