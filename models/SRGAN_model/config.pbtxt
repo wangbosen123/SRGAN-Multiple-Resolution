@@ -1,24 +1,24 @@
-name: "VGG_model"
+name: "SRGAN_model"
 platform: "tensorflow_savedmodel"
 input [
   {
     name: "keras_tensor"
     data_type: TYPE_FP32
-    dims: [64, 64, 3]
+    dims: [640, 640, 3]
   }
 ]
 output [
   {
     name: "output_0"
     data_type: TYPE_FP32
-    dims: [2, 2, 512]
+    dims: [640, 640, 3]
   }
 ]
 
-max_batch_size: 16
+max_batch_size: 8
 
 dynamic_batching{
-    preferred_batch_size: [16]
+    preferred_batch_size: [2, 8]
     max_queue_delay_microseconds: 10
 }
 
